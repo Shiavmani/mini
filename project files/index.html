@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDSS Galaxy</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+       body{
+            background: url('static\\bg1.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h5,p{
+            color: white;
+        }
+    </style>
+</head>
+<body >
+    <div id="main">
+        <div>
+            <nav>
+                <h3>SDSS Galaxy Classification using Machine Learning</h3>
+                <form action="{{ url_for('index') }}">
+                    <button type="submit">HOME</button>
+                </form>
+                <form action="{{ url_for('about') }}" method="post">
+                    <button type="submit">ABOUT</button>
+                </form>
+                
+                <form action="{{ url_for('input') }}">
+                    <button type="submit">GET STARTED</button>
+                </form>
+            </nav>
+        </div>
+        <div id="img"> <center>
+            <h5>Welcome to SDSS Galaxy Classification using Machine Learning</h5>
+            <p>SDSS classifies galaxies into 'STARFORMING' or 'STARBURST' types</p> </center>
+        </div>
+    </div>
+</body>
+</html>

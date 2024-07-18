@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+          body{
+            background: url('static\\bg4.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+        }
+        h1{
+            color: rgb(24, 239, 235);
+            filter: drop-shadow(1px 1px 1px grey);
+        }
+        p{
+            color: rgb(1, 13, 13);
+            text-wrap: wrap;
+            background-color: beige;
+            font-size: 25px;
+            padding: 10px;
+            width: 70vw;
+            border-radius: 5px;
+            
+        }
+        p:hover{
+            background-color: white;
+            color: rgb(24, 1, 3);
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px grey;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <nav>
+                <h2>SDSS Galaxy Classification</h2>
+                <ul>
+                    <li>
+                        <form action="{{ url_for('index') }}">
+                            <button type="submit">Home</button>
+                        </form>
+                    </li>
+                    <li>
+                        <form action="{{ url_for('input') }}">
+                            <button type="submit">Predict</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h1>What is SDSS?</h1>
+            <p>Galaxies are collections of billions of stars; our home galaxy, the Milky Way, is a typical example. Stars, gas, and interstellar dust orbit the center of the galaxy due to the gravitational attraction of all the other stars. New generations of stars are born out of gas that condenses within regions called giant molecular clouds, and the stars sometimes form into star clusters. When a star reaches the end of its evolution, it may return much of its gas back to the interstellar medium, which will be the source for a new generation of stars. Galaxies can be thought of as systems that turn gas into stars and back again.</p>
+        </div>
+    </div>
+</body>
+</html>
